@@ -11,11 +11,12 @@ const nav = [
 ];
 
 const booksRouter = require('./src/routes/bookroutes')(nav);
-
+const authorsRouter = require('./src/routes/authorroutes')(nav);
     app.use(express.static('./public'));
     app.set('view engine', 'ejs');
     app.set('views',__dirname+'/src/views');
-    app.use('/books', booksRouter)
+    app.use('/books', booksRouter);
+    app.use('/authors', authorsRouter);
     app.get('/',function(req,res){
     res.render("index",
     {   nav,

@@ -27,7 +27,7 @@ footer {
 
 #masthead {
   min-height:199px;
-  background-color:#000044;
+  background-color:#00796B;
   color:#aaaacc;
 }
 
@@ -40,7 +40,7 @@ footer {
 
 #masthead .well {
   margin-top:31px;
-  background-color:#111166;
+  background-color:rgb(55, 64, 70);
   border-color:#000022;
   color:#efefff;
   min-height:127px;
@@ -82,7 +82,7 @@ a,a:hover {
 }
 
 .navbar-bright {
-  background-color:#111166;
+  background-color:rgb(55, 64, 70);
   color:#fff;
   margin-bottom: 0;
   border-width: 0;
@@ -96,7 +96,7 @@ a,a:hover {
 }
 
 .navbar-bright li > a:hover {
-  background-color:#000044;
+  background-color:#00796B;
 }
 
 .dropdown-menu {
