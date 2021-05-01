@@ -1,8 +1,10 @@
 const express = require('express');
 const signupRouter = express.Router();
-function router(){
+function router(nav){
     signupRouter.get('/',function(req,res){
-        res.render('signup')
+        res.render('signup',{
+            nav
+        })
     });
     return signupRouter;
 }

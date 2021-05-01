@@ -1,8 +1,10 @@
 const express = require('express');
 const addauthorsRouter = express.Router();
-function router(){
+function router(nav){
     addauthorsRouter.get('/',function(req,res){
-        res.render("addauthors",);
+        res.render("addauthors",{
+            nav
+        });
     });
     return addauthorsRouter;
 }
