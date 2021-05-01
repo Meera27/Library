@@ -1,10 +1,13 @@
 let email = document.getElementById("exampleInputEmail1");
 let pwd = document.getElementById("exampleInputPassword1");
+
+
 function validate() {
     let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,4})(.[a-z]{2,3})?$/
     let pwdregx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
-    if (email.value.trim() == "" || pwd.value.trim() == "" ) {
+
+    if (email.value.trim() == "" || pwd.value.trim() == ""|| name.value.trim() == "" ) {
         alert("Fields cannot be empty");
         return false;
     }

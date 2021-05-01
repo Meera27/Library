@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    /* align-content:right; */
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #607d8b;;
+    height: 50px;
+  }
+  
+  /* 
+  .carousel-item{
+    min-height: 75%;
+  } */
+  
+  .nav__links a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display:flex;
+    float: right;
+    margin-top: 6%;
+  }
+  
+   .nav__links li {
+    padding: 0px 20px;
+  } 
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+   color: #0088a9;
+    /* color: #0088a9; */
+  }
+  
+  
+  /* COMMON */
+  
+  .box{
+    margin-top:8%; 
+    align-content: center;
+    border-bottom-left-radius: 75px !important;
+    border-bottom-right-radius: 75px !important;
+    border-top-right-radius: 75x;
+    min-height: 350px;
+    max-width: 100%;
+    margin: 10px;
+    
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  .name p{
+  margin-top:2%; 
+  padding: 5%;
+  text-align: center;
+  }
+  .forlogin{
+    text-decoration: none;
+  }
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #24252A !important;
+  }

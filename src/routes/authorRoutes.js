@@ -36,8 +36,7 @@ function router(nav){
                 author:authors[id]
             });
         });
+        
         return authorsRouter;
-
 }
-
 module.exports = router;
