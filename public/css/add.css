@@ -15,7 +15,6 @@ header{
     font-family:'Oswald',arial narrow,sans-serif;
   }
   .navbar.affix {
-    position:fixed;
     top:0;
     width:100%;
   }
@@ -90,7 +89,6 @@ form{
 
 
 .footer{
-    position: fixed;
   left: 0%;
   bottom: 0%;
   width: 100%;
