@@ -17,7 +17,6 @@ function validate() {
             alert("Validated");
             return true;
         }
-        
         else if (!regexp.test(email.value)) {
             alert("please enter a valid email(XXXX@abc.ab.mn)");
             return false;
