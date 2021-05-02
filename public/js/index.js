@@ -7,14 +7,13 @@ function validate() {
     let pwdregx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
 
-    if (email.value.trim() == "" || pwd.value.trim() == ""|| name.value.trim() == "" ) {
+    if (email.value.trim() == "" || pwd.value.trim() == "" ) {
         alert("Fields cannot be empty");
         return false;
     }
     else {
         if (regexp.test(email.value) && pwdregx.test(pwd.value)) {
             alert("Validated");
-            email.style.border = "2px solid green";
             return true;
         }
     

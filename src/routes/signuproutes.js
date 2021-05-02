@@ -3,7 +3,8 @@ const signupRouter = express.Router();
 function router(nav){
     signupRouter.get('/',function(req,res){
         res.render('signup',{
-            nav
+            nav,
+            title:"Sign Up"
         })
     });
     return signupRouter;

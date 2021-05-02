@@ -26,6 +26,10 @@ const nav = [
     link: "/addbooks",
     name: "Add Book",
   },
+  {
+    link: "/home",
+    name: "",
+  },
 ];
 
 const booksRouter = require("./src/routes/bookroutes")(nav);
@@ -44,7 +48,10 @@ app.use("/signup", signupRouter);
 app.use("/addauthor", addauthorsRouter);
 app.use("/addbooks", addbooksRouter);
 app.get("/", function (req, res) {
-  res.render("index", { nav, title: "Library" });
+  res.render("index", { nav, title: "Welcome" });
+});
+app.get("/home", function (req, res) {
+  res.render("home", { nav, title: "Library" });
 });
 app.listen(port, function () {
   console.log("Ready at " + port);

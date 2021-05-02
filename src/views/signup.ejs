@@ -14,9 +14,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/login.css">
-    <title>Login</title>
-    <link rel="icon" href="./assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/signup.css">
+    <title><%=title%></title>
+    <link rel="icon" href="/images/book.png" type="image/x-icon">
 
 </head>
 
@@ -53,16 +53,6 @@
                               </nav>
                             </div>
 
-
-
-
-        <!-- <nav>
-            <div class="header">
-                <ul class="nav__links">
-                    <li><a href="#" class="iconimg">Library Application</a></li>
-                </ul>
-            </div>
-        </nav> -->
     </header>
     <section class="Form my-4 mx-5">
         <div id="login" class="container">
@@ -73,36 +63,32 @@
                 <div class="col-lg-7 formcontents">
                     <h1 class="link1">Sign Up</h1>
                     <div class="to-right p-3">
-                        <form id="newform" action="/" onsubmit="return validate()">
+                        <form id="newform" action="/home" onsubmit="return validate()">
                             <div class="form-row">
                                     <div class="col col-lg-6 p-3">
-                                            <input type="text" id="fname" class="form-control border border-dark" placeholder="First name" aria-label="First name">
+                                            <input type="text" id="fname"  placeholder="First name" aria-label="First name">
                                     </div>
                                     <div class="col col-lg-6 p-3">
-                                            <input type="text" id="lname" class="form-control border border-dark" placeholder="Last name" aria-label="Last name">
+                                            <input type="text" id="lname"  placeholder="Last name" aria-label="Last name">
                                     </div>
-                                        
-                                        <div class="col-lg-6 col-mb-3 p-3">
-                                          <!-- <label for="example-tel-input" class="form-label">Telephone</label> -->
-                                          <input type="text" class="form-control border border-dark"placeholder="Telephone" id="number">
+                                        <div class="col col-lg-6 p-3">
+                                          <input type="text" placeholder="Username" id="uname">
                                            </div>
                                            <div class="col col-lg-6 p-3">
-                                        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
-                                        <input type="email" class="form-control border border-dark" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp" />
-                                        <!-- <div id="emailHelp" class="form-text">
-                                          We'll never share your email with anyone else.
-                                        </div> -->
+                                        <input type="text"  id="number" placeholder="Telephone"/>              
                                       </div>
-                                      <div class="col col-lg-6 mx-5 p-3 field" id="field">
-                                          <!-- <label for="exampleInputPassword1" class="form-label " id="plabel">Password</label> -->
-                                          <input type="password"  class="form-control border border-dark" type="password" id="exampleInputPassword1" placeholder="Password">
+                                      <div class="col col-lg-6 p-3">
+                                          <input type="email"  id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp" />                             
+                                        </div>
+                                      <div class="col col-lg-6 p-3">
+                                          <input type="password"  type="password" id="exampleInputPassword1" placeholder="Password">
                                           <span id="password_strength"></span>
                                         </div>
                 </div>
             </div>
                             <div class="form-row">
                                 <div class="col-lg-5 p-2">
-                                    <button type="submit" class="btn btn-outline-dark btn-lg mt-3 mb-5 lbtn" id="submitme">Login</button>
+                                    <button type="submit" class="btn btn-outline-dark btn-lg mt-3 mb-5 lbtn" id="submitme">Sign Up</button>
                                 </div>
                             </div>
                         </form>

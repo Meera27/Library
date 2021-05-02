@@ -3,7 +3,8 @@ const loginRouter = express.Router();
 function router(nav){
     loginRouter.get('/',function(req,res){
         res.render('login',{
-            nav
+            nav,
+            title:"Login"
         })
     });
     return loginRouter;

@@ -3,7 +3,8 @@ const addbooksRouter = express.Router();
 function router(nav){
     addbooksRouter.get('/',function(req,res){
         res.render("addbooks",{
-            nav
+            nav,
+            title:"Add Book"
         });
     });
     return addbooksRouter;

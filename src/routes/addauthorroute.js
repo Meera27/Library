@@ -3,7 +3,8 @@ const addauthorsRouter = express.Router();
 function router(nav){
     addauthorsRouter.get('/',function(req,res){
         res.render("addauthors",{
-            nav
+            nav,
+            title:"Add Author"
         });
     });
     return addauthorsRouter;
