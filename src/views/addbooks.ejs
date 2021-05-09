@@ -86,23 +86,25 @@
         <div class="panel">
           <div class="panel-body">
             <div class="row">
-              <form class="form col-lg-6" action="/home" onsubmit="return validate()" role="search" style="margin-left: 25%; margin-right: 25%;">
+              <!-- <form class="form col-lg-6" action="/addbooks/add" method="GET" onsubmit="return validate()" role="search" style="margin-left: 25%; margin-right: 25%;"> -->
+              <form class="form col-lg-6" action="/admin/add" method="POST"  role="search" style="margin-left: 25%; margin-right: 25%;">
+
                 <div class="form-group">
-                  <input type="text" id="book" class="form-control" placeholder="Book">
+                  <input type="text" id="book" class="form-control" placeholder="Book" name="title">
                 </div>
                 <div class="form-group">
-                  <input type="text" id="genre" class="form-control" placeholder="Genre">
+                   <input type="text" id="genre" class="form-control" placeholder="Genre" name="genre">
                 </div>
                 <div class="form-group">
-                  <input type="text" id="name" class="form-control" placeholder="Author's Name">
+                 <input type="text" id="name" class="form-control" placeholder="Author's Name" name="author">
                 </div>
               
                 <div class="form-group custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
+                  <input type="file" class="custom-file-input" id="customFile" name="image">
                 </div>
                 <div class="form-group">
                   
-                  <textarea class="form-control rounded-0" id="tarea" rows="3" placeholder="Plot of the novel"></textarea>
+                  <textarea class="form-control rounded-0" id="tarea" rows="3" placeholder="Plot of the novel" name="desc"></textarea>
                 </div>
                 <button type="submit" class="btn btn-google-plus">Submit</button>
               </form>
