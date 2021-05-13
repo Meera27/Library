@@ -2,8 +2,8 @@
 const mongoose = require('mongoose');
 
 //Database connection
-// mongoose.connect('mongodb://localhost:27017/library');
-mongoose.connect('mongodb+srv://user1:user1@ictak-meera.d0obp.mongodb.net/LibraryApp?retryWrites=true&w=majority')
+mongoose.connect('mongodb://localhost:27017/library');
+// mongoose.connect('mongodb+srv://user1:user1@ictak-meera.d0obp.mongodb.net/LibraryApp?retryWrites=true&w=majority')
 
 
 //Schema definition
