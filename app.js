@@ -1,6 +1,5 @@
 const express = require("express");
 const app = new express();
-const bodyp = re
 const port = process.env.PORT || 2000;
 
 const nav = [
@@ -41,6 +40,7 @@ const signupRouter = require("./src/routes/signuproutes")(nav);
 const addauthorsRouter = require("./src/routes/addauthorroute")(nav);
 const adminRouter = require("./src/routes/adminRoutes")(nav);
 
+const urlencodedParser = bodyParser.urlencoded({extended:false});
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("./public"));
 
