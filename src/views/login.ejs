@@ -78,16 +78,16 @@
                     <h1 class="link1 mb-4">Login</h1>
                     <div class="to-right p-3">
                         <!-- <form id="newform" action="/home" method="POST" onsubmit="return validate()"> -->
-                        <form id="newform" method="POST" onsubmit="return validate()">
+                        <form id="newform" action="/login/valid" method="POST" onsubmit="return validate()">
                            
                             <div class="form-row">
                                 <div class="col-lg-7 mb-5 px-5">
-                                    <input type="text" placeholder="Email" id="exampleInputEmail1" />
+                                    <input type="text" placeholder="Email" id="exampleInputEmail1" name="email" />
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-7 mb-5 px-5">
-                                    <input type="password" placeholder="Password" id="exampleInputPassword1" />
+                                    <input type="password" placeholder="Password" id="exampleInputPassword1"name="password" />
                                 </div>
                             </div>
                             <div class="form-row">

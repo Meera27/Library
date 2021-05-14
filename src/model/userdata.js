@@ -10,7 +10,7 @@ const UserSchema = new Schema({
     uname :{type:String,unique:true},
     phone :Number,
     email :String,
-    pwd   :String,
+    password :String,
 });
 
 var UserData = mongoose.model('userdata',UserSchema);

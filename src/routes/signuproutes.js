@@ -31,7 +31,7 @@ function router(nav){
             }
             return res.status(200).send();
         });
-        // res.redirect('/home');
+        res.redirect('/home');
     });
     return signupRouter;
 }
