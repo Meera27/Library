@@ -1,6 +1,5 @@
 const express = require("express");
 const app = new express();
-
 const bodyParser = require('body-parser');
 const { check , validationResult } =  require('express-validator');
 const port = process.env.PORT || 2000;
@@ -61,11 +60,15 @@ app.use("/admin", adminRouter);
 app.get("/", function (req, res) {
   res.render("index", { nav, title: "Welcome" });
 });
+
 app.get("/home", function (req, res) {
   res.render("home", { nav, title: "Library" });
 });
 
 app.post('/login',urlencodedParser,(req,res)=>{
+  res.json(req.body);
+});
+app.post('/signup',urlencodedParser,(req,res)=>{
   res.json(req.body);
 });
 
