@@ -1,7 +1,7 @@
 const express = require("express");
 const app = new express();
-const bodyParser = require('body-parser');
-const { check , validationResult } =  require('express-validator');
+// const bodyParser = require('body-parser');
+// const { check , validationResult } =  require('express-validator');
 const port = process.env.PORT || 2000;
 
 const nav = [
@@ -42,7 +42,7 @@ const signupRouter = require("./src/routes/signuproutes")(nav);
 const addauthorsRouter = require("./src/routes/addauthorroute")(nav);
 const adminRouter = require("./src/routes/adminRoutes")(nav);
 
-const urlencodedParser = bodyParser.urlencoded({extended:false});
+
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("./public"));
 
@@ -63,13 +63,6 @@ app.get("/", function (req, res) {
 
 app.get("/home", function (req, res) {
   res.render("home", { nav, title: "Library" });
-});
-
-app.post('/login',urlencodedParser,(req,res)=>{
-  res.json(req.body);
-});
-app.post('/signup',urlencodedParser,(req,res)=>{
-  res.json(req.body);
 });
 
 app.listen(port, function () {

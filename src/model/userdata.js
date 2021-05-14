@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost:27017/library');
 
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
     fname :String,
     lname :String,
-    uname :String,
+    uname :{type:String,unique:true},
     phone :Number,
     email :String,
     pwd   :String,
