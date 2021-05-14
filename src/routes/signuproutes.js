@@ -24,11 +24,17 @@ function router(nav){
         newuser.phone = phone;
         newuser.email = email;
         newuser.password = password;
+        // UserData.findOne({uname:uname},function(err,user){
+        //     if(user){
+        //         
+        //     }
+        // });
         newuser.save(function(err,userdata){
             if(err){
                 console.log(err);
                 return res.status(500).send();
             }
+            
             return res.status(200).send();
         });
         res.redirect('/home');

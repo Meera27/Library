@@ -19,9 +19,7 @@ function router(nav){
         var authors = AuthorData(item);
         authors.save();
         res.redirect('/authors');
-  
     });
-
     return addauthorsRouter;
 }
 module.exports = router;
