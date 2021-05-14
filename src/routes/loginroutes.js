@@ -1,8 +1,8 @@
 const express = require('express');
 const loginRouter = express.Router();
 
-const bodyParser = require('body-parser');
-const { check , validationResult } =  require('express-validator');
+// const bodyParser = require('body-parser');
+// const { check , validationResult } =  require('express-validator');
 
 
 

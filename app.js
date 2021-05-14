@@ -1,5 +1,8 @@
 const express = require("express");
 const app = new express();
+
+const bodyParser = require('body-parser');
+const { check , validationResult } =  require('express-validator');
 const port = process.env.PORT || 2000;
 
 const nav = [
@@ -61,6 +64,11 @@ app.get("/", function (req, res) {
 app.get("/home", function (req, res) {
   res.render("home", { nav, title: "Library" });
 });
+
+app.post('/login',urlencodedParser,(req,res)=>{
+  res.json(req.body);
+});
+
 app.listen(port, function () {
   console.log("Ready at " + port);
 });
