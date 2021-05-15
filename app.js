@@ -33,6 +33,10 @@ const nav = [
     link: "/home",
     name: "",
   },
+  {
+    link: "/error",
+    name: "",
+  }
 ];
 
 const booksRouter = require("./src/routes/bookroutes")(nav);
@@ -56,7 +60,9 @@ app.use("/signup", signupRouter);
 app.use("/addauthor", addauthorsRouter);
 app.use("/admin", adminRouter);
 
-
+app.get("/error",function(req,res){
+  res.render("error",{nav,title:"Error"})
+});
 app.get("/", function (req, res) {
   res.render("index", { nav, title: "Welcome" });
 });

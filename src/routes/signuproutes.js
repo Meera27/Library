@@ -20,7 +20,7 @@ function router(nav){
         var newuser = new UserData();
         newuser.fname = fname;
         newuser.lname = lname;
-        newuser.uname = uname;
+        // newuser.uname = uname;
         newuser.phone = phone;
         newuser.email = email;
         newuser.password = password;
