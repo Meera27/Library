@@ -1,5 +1,7 @@
 const express = require("express");
 const app = new express();
+const InitiateMongoServer = require("./db");
+InitiateMongoServer();
 // const bodyParser = require('body-parser');
 // const { check , validationResult } =  require('express-validator');
 const port = process.env.PORT || 2000;

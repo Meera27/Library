@@ -12,7 +12,7 @@ function router(nav){
     
        var fname = req.body.fname;
         var lname = req.body.lname;
-         var uname = req.body.uname;
+        //  var uname = req.body.uname;
          var phone = req.body.phone;
          var email = req.body.email;
          var password = req.body.password;
