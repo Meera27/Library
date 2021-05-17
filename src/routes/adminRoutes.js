@@ -10,19 +10,6 @@ function router(nav){
     });
 
     adminRouter.post('/add',function(req,res){
-    //     var item={
-    //       title : req.query.title,
-    //       genre : req.query.genre,
-    //       author:req.query.Author,
-    //       image : req.query.image,
-    //       desc : req.query.desc
-    //     }
-    //   var book = Bookdata(item);
-    //   book.save();//saving to db
-    //   res.redirect('/books');
-    // res.send("Added")
-
-
     var item={
               title : req.body.title,
               genre : req.body.genre,
@@ -31,11 +18,45 @@ function router(nav){
               desc : req.body.desc
             }
           var book = Bookdata(item);
-          book.save();//saving to db
+          book.save();
           res.redirect('/books');
-    
      });
-     
+
+     adminRouter.get('/updatebook/:id',function(req,res){
+        const id = req.params.id;    
+        Bookdata.findOne({_id:id})
+        .then(function(book){
+            res.render("updatebook",{
+                nav,
+                title:'Library',
+                book
+            });
+        })
+        
+    });
+
+    adminRouter.post('/updatebook/:id',function(req,res){
+        const id = req.params.id; 
+    var item = {
+              title : req.body.title,
+              genre : req.body.genre,
+              author:req.body.Author,
+              image : req.body.image,
+              desc : req.body.desc
+    };
+    
+    console.log(id);
+    Bookdata.findOneAndUpdate({_id:id},item,(err)=>{
+        if(err){
+            console.log(err); 
+        }
+        else{
+            console.log("Successfully Updated");
+            res.redirect('/books');
+        }
+    })
+        
+});
     return adminRouter;
 }
 module.exports = router;

@@ -24,12 +24,12 @@ const nav = [
     name: "Authors",
   },
   {
-    link: "/addauthor",
-    name: "Add Author",
-  },
-  {
     link: "/admin",
     name: "Add Book",
+  },
+  {
+    link: "/addauthor",
+    name: "Add Author",
   },
   {
     link: "/home",

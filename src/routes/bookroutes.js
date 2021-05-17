@@ -46,8 +46,7 @@ function router(nav){
                     title:'Library',
                     book
                 });
-            })
-            
+            })   
         });
         return booksRouter;
 

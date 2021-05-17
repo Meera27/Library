@@ -47,6 +47,19 @@ function router(nav){
             })
             
         });
+        authorsRouter.get('/:id',function(req,res){
+            const id = req.params.id; 
+            AuthorData.findOne({_id:id})
+            .then(function(author){
+                res.render("author",{
+                    nav,
+                    title:'Library',
+                    author
+                });
+
+            })
+            
+        });
         
         return authorsRouter;
 }

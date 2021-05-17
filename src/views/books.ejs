@@ -97,13 +97,17 @@
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=books[i].title%></h3>
+              <a href="/admin/updatebook/<%=books[i]._id%>" class="btn btn-primary pull-right btnNext">Edit<i class="glyphicon "></i></a><br><br>
+              <a href="/admin/updatebook/<%=books[i]._id%>" class="btn btn-primary pull-right btnNext">Delete<i class="glyphicon "></i></a>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=books[i].author%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].genre%><br>
                     <a href="/books/<%=books[i]._id%>" class="text-muted">Read More</a></small>
                   </h4></div>
+                 
                 <div class="col-xs-3"></div>
+                
               </div>
               <br><br>
             </div>
