@@ -40,7 +40,7 @@ function router(nav){
     var item = {
               title : req.body.title,
               genre : req.body.genre,
-              author:req.body.author,
+              author:req.body.uthor,
               image : req.body.image,
               desc : req.body.desc
     };
@@ -57,6 +57,19 @@ function router(nav){
     })
         
 });
+adminRouter.get('/deletebook/:id',function(req,res){
+    const id = req.params.id; 
+    Bookdata.remove({_id:id},function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.redirect('/books');
+        }
+    });
+});
+
     return adminRouter;
 }
 module.exports = router;
+

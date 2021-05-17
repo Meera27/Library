@@ -54,6 +54,17 @@ function router(nav){
     })
         
 });
+addauthorsRouter.get('/deleteauthor/:id',function(req,res){
+    const id = req.params.id; 
+    AuthorData.remove({_id:id},function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.redirect('/authors');
+        }
+    });
+});
 
 
     return addauthorsRouter;
