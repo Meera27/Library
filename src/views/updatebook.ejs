@@ -90,21 +90,20 @@
               <form class="form col-lg-6" action="/admin/updatebook/<%=book._id%>" method="POST"  role="search" style="margin-left: 25%; margin-right: 25%;">
 
                 <div class="form-group">
-                  <input type="text" id="book" class="form-control" value="<%=book.name%>" placeholder="Book" name="title">
+                  <input type="text" id="book" class="form-control" value="<%=book.title%>" placeholder="Book" name="title">
                 </div>
                 <div class="form-group">
                    <input type="text" id="genre" class="form-control" value="<%=book.genre%>" placeholder="Genre" name="genre">
                 </div>
                 <div class="form-group">
-                 <input type="text" id="name" class="form-control" placeholder="Author's Name" value="<%=book.author%>" name="author">
+                 <input type="text" id="name" class="form-control" value="<%=book.author%>" placeholder="Author's Name"  name="author">
                 </div>
               
                 <div class="form-group custom-file">
-                  <input type="file" class="custom-file-input" id="customFile"value="<%=book.image%>" name="image">
+                  <input type="file"value="<%=book.image%>" class="custom-file-input" id="customFile" name="image">
                 </div>
-                <div class="form-group">
-                  
-                  <textarea class="form-control rounded-0" id="tarea" rows="3" placeholder="Plot of the novel"value="<%=book.desc%>" name="desc"></textarea>
+                <div class="form-group">        
+                  <textarea class="form-control rounded-0" id="tarea" rows="3" placeholder="Plot of the novel" name="desc"><%=book.desc%></textarea>
                 </div>
                 <button type="submit" class="btn btn-google-plus">Submit</button>
               </form>

@@ -13,7 +13,7 @@ function router(nav){
     var item={
               title : req.body.title,
               genre : req.body.genre,
-              author:req.body.Author,
+              author:req.body.author,
               image : req.body.image,
               desc : req.body.desc
             }
@@ -40,7 +40,7 @@ function router(nav){
     var item = {
               title : req.body.title,
               genre : req.body.genre,
-              author:req.body.Author,
+              author:req.body.author,
               image : req.body.image,
               desc : req.body.desc
     };
