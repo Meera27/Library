@@ -90,7 +90,7 @@
             <div class="row">
               <!-- <form class="form col-lg-6" action="/addbooks/add" method="GET" onsubmit="return validate()" role="search" style="margin-left: 25%; margin-right: 25%;"> -->
               <form class="form col-lg-6" action="/admin/updatebook/<%=book._id%>" method="POST" role="search"
-                style="margin-left: 25%; margin-right: 25%;">
+                style="margin-left: 25%; margin-right: 25%;" enctype="multipart/form-data">
 
                 <div class="form-group">
                   <input type="text" id="book" class="form-control" value="<%=book.title%>" placeholder="Book"
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="form-group custom-file">
-                  <input type="file" value="<%=book.image%>" class="custom-file-input" id="customFile" name="image">
+                  <input type="file" value="<%=book.image%>" class="custom-file-input" id="customFile" name="image" accept="image/*>
                 </div>
                 <div class="form-group">
                   <textarea class="form-control rounded-0" id="tarea" rows="3" placeholder="Plot of the novel"

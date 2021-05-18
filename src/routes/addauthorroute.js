@@ -1,7 +1,33 @@
 const express = require("express");
 const addauthorsRouter = express.Router();
-
 const AuthorData = require("../model/authordata");
+
+const multer = require('multer');
+const { request } = require("express");
+
+const storage = multer.diskStorage({
+//destination for files
+    destination: function (req, file, callback) {
+        callback(null, './public/images/uploads');
+    },
+
+//add back the extension
+    filename: function (req, file, callback) {
+        callback(null, Date.now() + file.originalname);
+    },
+});
+
+//upload parameters for multer
+const upload = multer({
+    storage: storage,
+    limits: {
+        fieldSize: 1024 * 1024 * 3,
+    },
+});
+
+
+
+
 function router(nav) {
   addauthorsRouter.get("/", function (req, res) {
     res.render("addauthors", {
@@ -9,12 +35,14 @@ function router(nav) {
       title: "Add Author",
     });
   });
-  addauthorsRouter.post("/add", function (req, res) {
+  addauthorsRouter.post("/add",upload.single('image'),function (req, res) {
+    console.log(req.file);
     var item = {
       name: req.body.name,
       title: req.body.title,
-      image: req.body.image,
+      image:req.file.filename,
       desc: req.body.desc,
+      
     };
     var authors = AuthorData(item);
     authors.save();
@@ -31,12 +59,12 @@ function router(nav) {
     });
   });
 
-  addauthorsRouter.post("/updateauthor/:id", function (req, res) {
+  addauthorsRouter.post("/updateauthor/:id",upload.single('image'), function (req, res) {
     const id = req.params.id;
     var item = {
       name: req.body.name,
       title: req.body.title,
-      image: req.body.image,
+      image: req.file.filename,
       desc: req.body.desc,
     };
     console.log(id);
@@ -50,7 +78,7 @@ function router(nav) {
   });
   addauthorsRouter.get("/deleteauthor/:id", function (req, res) {
     const id = req.params.id;
-    AuthorData.remove({ _id: id }, function (err) {
+    AuthorData.deleteOne({ _id: id }, function (err) {
       if (err) {
         console.log(err);
       } else {
