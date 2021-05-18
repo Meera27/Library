@@ -14,7 +14,7 @@ function validate() {
     }
     else {
         if (regexp.test(email.value) && pwdregx.test(pwd.value) && noregex.test(no.value)) {
-            // alert("Validated");
+            alert("Validated");
             return true;
         }
         else if (!regexp.test(email.value)) {
