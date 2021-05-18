@@ -37,11 +37,7 @@ function router(nav){
                 return res.status(200).redirect('/home')
              }
          })
-        
-        // const newuser = {fname,lname,phone,email,password};
-        // console.log(newuser);
-        // const addnew= UserData.create(newuser);
-        //     return res.status(200).redirect('/home')
+    
         });
     return signupRouter;
 }
