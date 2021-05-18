@@ -21,7 +21,7 @@ function router(nav) {
         } else {
           if (!user) {
             res.render("login", {
-              errormessage: "Invalid Login!!!Please Try Again",
+              errormessage: "Invalid Login!!!",
               nav,
               title: "Login",
             });
