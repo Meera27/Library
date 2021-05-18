@@ -60,13 +60,6 @@
                 </ul>
             </nav>
         </div>
-        <!-- <nav>
-            <div class="header">
-                <ul class="nav__links">
-                    <li><a href="#" class="iconimg">Library Application</a></li>
-                </ul>
-            </div>
-        </nav> -->
     </header>
     <section class="Form my-4 mx-5">
         <div id="login" class="container">
@@ -77,26 +70,25 @@
                 <div class="col-lg-7 formcontents">
                     <h1 class="link1 mb-4">Login</h1>
                     <div class="to-right p-3">
-                        <!-- <form id="newform" action="/home" method="POST" onsubmit="return validate()"> -->
                         <form id="newform" action="/login/valid" method="POST">
-                           
                             <div class="form-row">
                                 <div class="col-lg-7 mb-5 px-5">
-                                    <input type="text" placeholder="Email" id="exampleInputEmail1" name="email" >
+                                    <input type="text" placeholder="Email" id="exampleInputEmail1" name="email">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-7 mb-5 px-5">
-                                    <input type="password" placeholder="Password" id="exampleInputPassword1"name="password" >
+                                    <input type="password" placeholder="Password" id="exampleInputPassword1" name="password">
                                 </div><br><br>
                             </div>
                             <div class="col-lg-7 mb-3 px-5">
-                                <label for="error" style="color: red;"><%=errormessage%></label>                           
-                             </div>              
+                                <label for="error" style="color: red;">
+                                    <%=errormessage%>
+                                </label>
+                            </div>
                             <div class="form-row">
                                 <div class="col-lg-5">
-                                    <button type="submit" class="btn btn-outline-dark btn-lg mt-3 mb-5 lbtn"
-                                        id="submitme">Login</button>
+                                    <button type="submit" class="btn btn-outline-dark btn-lg mt-3 mb-5 lbtn" id="submitme">Login</button>
                                 </div>
                             </div>
                         </form>

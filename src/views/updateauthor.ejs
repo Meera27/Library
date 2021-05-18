@@ -9,7 +9,9 @@
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-  <title><%=title%></title>
+  <title>
+    <%=title%>
+  </title>
   <link rel="icon" href="/images/book.png" type="image/x-icon">
 
 </head>
@@ -87,19 +89,23 @@
           <div class="panel-body">
             <div class="row">
               <!-- <form class="form col-lg-6" action="/addbooks/add" method="GET" onsubmit="return validate()" role="search" style="margin-left: 25%; margin-right: 25%;"> -->
-              <form class="form col-lg-6" action="/addauthor/updateauthor/<%=author._id%>" method="POST"  role="search" style="margin-left: 25%; margin-right: 25%;">
+              <form class="form col-lg-6" action="/addauthor/updateauthor/<%=author._id%>" method="POST" role="search"
+                style="margin-left: 25%; margin-right: 25%;">
 
                 <div class="form-group">
-                  <input type="text" id="name1" class="form-control" value="<%=author.name%>"placeholder="Author's Name" name="name">
+                  <input type="text" id="name1" class="form-control" value="<%=author.name%>"
+                    placeholder="Author's Name" name="name">
                 </div>
                 <div class="form-group">
-                  <input type="text" id="book1" class="form-control"value="<%=author.title%>" placeholder="Bestseller" name="title">
+                  <input type="text" id="book1" class="form-control" value="<%=author.title%>" placeholder="Bestseller"
+                    name="title">
                 </div>
                 <div class="form-group custom-file">
                   <input type="file" class="custom-file-input" value="<%=author.image%>" id="customFile" name="image">
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control rounded-0" id="tarea1" rows="3" placeholder="Few words about the author"name="desc"><%=author.desc%></textarea>
+                  <textarea class="form-control rounded-0" id="tarea1" rows="3" placeholder="Few words about the author"
+                    name="desc"><%=author.desc%></textarea>
                 </div>
                 <button type="submit" class="btn btn-google-plus">Submit</button>
               </form>
@@ -150,5 +156,3 @@
 </body>
 
 </html>
-
-

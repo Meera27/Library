@@ -2,8 +2,6 @@ const express = require("express");
 const app = new express();
 const InitiateMongoServer = require("./db");
 InitiateMongoServer();
-// const bodyParser = require('body-parser');
-// const { check , validationResult } =  require('express-validator');
 const port = process.env.PORT || 2000;
 
 const nav = [
@@ -35,10 +33,6 @@ const nav = [
     link: "/home",
     name: "",
   },
-  {
-    link: "/error",
-    name: "",
-  }
 ];
 
 const booksRouter = require("./src/routes/bookroutes")(nav);
@@ -48,8 +42,7 @@ const signupRouter = require("./src/routes/signuproutes")(nav);
 const addauthorsRouter = require("./src/routes/addauthorroute")(nav);
 const adminRouter = require("./src/routes/adminRoutes")(nav);
 
-
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 
 app.set("view engine", "ejs");
@@ -62,9 +55,6 @@ app.use("/signup", signupRouter);
 app.use("/addauthor", addauthorsRouter);
 app.use("/admin", adminRouter);
 
-app.get("/error",function(req,res){
-  res.render("error",{nav,title:"Error"})
-});
 app.get("/", function (req, res) {
   res.render("index", { nav, title: "Welcome" });
 });
