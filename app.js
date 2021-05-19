@@ -29,10 +29,13 @@ const nav = [
     link: "/addauthor",
     name: "Add Author",
   },
+  { link:"/",
+    name:"Logout"
+  },
   {
     link: "/home",
     name: "",
-  },
+  }
 ];
 
 const booksRouter = require("./src/routes/bookroutes")(nav);

@@ -33,7 +33,7 @@ function router(nav){
              else if(!user){
                 const newuser = {fname,lname,phone,email,password};
                 console.log(newuser);
-                const addnew= UserData.create(newuser);
+                UserData.create(newuser);
                 return res.status(200).redirect('/home')
              }
          })
